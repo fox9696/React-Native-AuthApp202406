@@ -1,10 +1,18 @@
 import React from 'react';
-import { TextInput, View } from 'react-native';
+import { Text, TextInput, View } from 'react-native';
 
-const Input = () => {
+const Input = ({label , keyboardType,secure, onUpdateValue}) => {
   return (
     <View style={styles.inputContainer}>
-      <TextInput />
+      <Text>{label}</Text>
+      <TextInput 
+      style={styles.input} 
+      autoCapitalize='none'
+      keyboardType={keyboardType}
+      secureTextEntry={secure}
+      onChangeText={onUpdateValue}
+      value={value}
+      />
     </View>
   );
 };
@@ -18,5 +26,7 @@ const styles = StyleSheet.create({
   input: {
     PaddingVertical: 8,
     paddingHorizontal: 6,
+    backgroundColor:Color.primary100,
+    borderRadius:
   },
 });
