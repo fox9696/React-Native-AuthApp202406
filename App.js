@@ -10,7 +10,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WelcomeScreen from './screens/WelcomeScreen';
 import { useContext } from 'react';
 import AuthContextProvider, { AuthContext } from './store/auth-context';
-import IconButton from './components/Ui/IconButton';
+import IconButton from './components/ui/IconButton';
 
 const Stack = createNativeStackNavigator();
 
